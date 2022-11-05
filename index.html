@@ -87,16 +87,67 @@
       </section>
       <section id="Ciekawostki">
         <div>
-          <span>Ciekawostki</span>
-          <p>
-            tekst <time datetime="2022-01-01T22:22"></time>
-            <!-- data/czas są zapisane w formacie zdefiniowanym standardem ISO8601 -->
-          </p>
+          <div>
+            <span>Ciekawostki</span>
+            <p>
+              tekst <time datetime="2022-01-01T22:22"></time>
+              <!-- data/czas są zapisane w formacie zdefiniowanym standardem ISO8601 -->
+            </p>
+            <button class="btn" type="button">Sortuj wg daty dodania</button>
+            <button class="btn" type="button">
+              Sortuj w kolejności alfabetycznej
+            </button>
+          </div>
+          <div>
+            <span>Losowa ciekawostka na dziś</span>
+            <button class="btn" type="button">Losowa ciekawostka</button>
+            <p></p>
+          </div>
+          <div>
+            <span>Ciekawostki wg klucza:</span>
+            <button class="btn" type="button">Odcinek</button>
+            <button class="btn" type="button">Słowo kluczowe</button>
+          </div>
         </div>
       </section>
       <section id="Źródła_naukowe">
         <div>
           <span>Źródła naukowe</span>
+          <p></p>
+        </div>
+      </section>
+      <section id="Komentarze">
+        <div>
+          <span>Komentarze</span>
+          <form
+            name="comments"
+            action="http://localhost:3000/comments"
+            method="POST"
+          >
+            <label>
+              Odcinek
+              <label for="select_episode">Wybierz odcinek</label>
+              <select id="select_episode" name="select_episode">
+                <option value="episode1">Odcinek 1</option>
+                <option value="episode2">Odcinek 2</option>
+                <option value="episode3_part1" selected>
+                  Odcinek 3. cz 1.
+                </option>
+                <option value="episode3_part2">Odcinek 3 cz. 2.</option>
+                <option value="episode4_part1" selected>
+                  Odcinek 4. cz 1.
+                </option>
+                <option value="episode4_part2">Odcinek 4 cz. 2.</option>
+                <option value="episode5">Odcinek 5.</option>
+              </select>
+              <!-- wybierz odcinek -->
+            </label>
+            <label>
+              Komentarze
+              <input type="text" name="comment" />
+            </label>
+            <button type="submit">Wyślij</button>
+          </form>
           <p></p>
         </div>
       </section>
