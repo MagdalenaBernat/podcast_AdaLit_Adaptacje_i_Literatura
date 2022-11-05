@@ -123,6 +123,7 @@
             name="comments"
             action="http://localhost:3000/comments"
             method="POST"
+            autocomplete="off"
           >
             <label>
               Odcinek
@@ -149,12 +150,16 @@
               <!-- wybierz odcinek -->
             </label>
             <label>
-              Komentarze
-              <input type="text" name="comment" />
+              Komentarz
+              <input
+                type="text"
+                name="comment"
+                placeholder="Wpisz komentarz"
+                required
+              />
             </label>
             <button type="submit">Wyślij</button>
           </form>
-          <p></p>
         </div>
       </section>
       <!-- tu powienien być tag zamykający </main>, ale prettier to łachudra-->
