@@ -3,3 +3,8 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+.textarea {
+    resize: vertical;
+}
+/* czemu .textarea nie działa? */
